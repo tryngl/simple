@@ -1,38 +1,17 @@
 window._genesys = {
     widgets: {
         main: {
-            debug: true,
-            preload: ['sidebar'],
+          preload: ['webchat'],
         },
         webchat: {
-            transport: {
-            	type: 'purecloud-v2-sockets',
-            	dataURL: 'https://api.mypurecloud.com',
-        		deploymentKey : 'DeploymentKey',
-        		orgGuid : 'orgGUID',
-            	interactionData: {
-                  routing: {
-                    targetType: 'QUEUE',
-                	targetAddress: '123Test',
-                	priority: 2
-                	}
-            	}
+            chatButton: {
+                enabled: true,
+                template: '<div class="cx-widget cx-webchat-chat-button cx-side-button" role="button" tabindex="0" data-message="ChatButton" data-gcb-service-node="true"><span class="cx-icon"></span><span class="i18n cx-chat-button-label" data-message="ChatButton"></span></div>',
+                effect: 'fade', 
+                openDelay: 10,
+                effectDuration: 10,
+                hideDuringInvite: true
             }
-        },
-        sidebar: {
-            showOnStartup: true,
-            position: 'right',
-            expandOnHover: true,
-            channels:
-            [
-                {
-                name: 'WebChat',
-                clickCommand: 'WebChat.open', 
-                displayName: 'Chat', 
-                displayTitle: 'Get live help',
-                icon: 'chat'
-                }
-            ]
-        }    
+        }
     }
 };
