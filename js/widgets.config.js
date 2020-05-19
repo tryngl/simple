@@ -1,7 +1,7 @@
 window._genesys = {
     widgets: {
         main: {
-          //preload: ['webchat'],
+          preload: ['webchat'],
         },
         webchat: {
             chatButton: {
