@@ -2,6 +2,7 @@ window._genesys = {
     widgets: {
         main: {
           preload: ['webchat'],
+          downloadGoogleFont: false
         },
         webchat: {
             chatButton: {
